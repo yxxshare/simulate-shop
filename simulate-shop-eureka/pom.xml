@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.mosang</groupId>
+        <artifactId>simulate-shop-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../simulate-shop-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>simulate-shop-euraka</artifactId>
+    <packaging>jar</packaging>
+
+    <name>simulate-shop-eureka</name>
+    <url>http://www.mosang.com</url>
+    <inceptionYear>2020-Now</inceptionYear>
+    <dependencies>
+        <!-- SpringCloud  Eureka  注册中心依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+        <!-- SpringBoot  Test  测试框架 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- SpringBoot 项目打jar包的Maven插件 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.mosang.simulate.shop.eureka.lication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
